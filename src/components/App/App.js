@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Spotify from '../utils/spotify';
+import SearchBar from '../searchBar/SearchBar';
+import Playlist from '../playlist/Playlist';
 class app extends React.Component {
   constructor(props) {
     super(props);
@@ -71,7 +73,7 @@ function App() {
             searchResults={this.state.searchResults}
             onAdd={this.doThese}
           />
-          <PlayList
+          <Playlist
             PlayListTracks={this.state.PlayListTracks}
             onNameChange={this.playListName}
             onRemove={this.trackRemove}
